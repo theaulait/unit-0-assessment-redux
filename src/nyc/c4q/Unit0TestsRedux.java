@@ -123,12 +123,34 @@ public class Unit0TestsRedux {
         assertEquals("abracadabraabracadabraabracadabra", Unit0Exercises.alternateS1AndS2Xtimes("abra", "cadabra", 3));
     }
 
-
     @Test
     public void testStringSplit(){
         assertEquals("ubi", Unit0Exercises.stringSplit("ubiquitous", "q"));
         assertEquals("hello", Unit0Exercises.stringSplit("hellogoodbye", "good"));
         assertEquals("", Unit0Exercises.stringSplit("fancy seeing you", "there"));
+    }
+
+    @Test
+    public void testReturnBeyonce(){
+      Singer singer = Unit0Exercises.returnBeyonce();
+      assertNotEquals(null, singer);
+      assertEquals("Beyonce", singer.getName());
+      assertEquals("USA", singer.getLocation());
+    }
+
+    @Test
+    public void testReturnSingerChild(){
+      Singer s1 = new Singer("Beyonce", "USA");
+      Singer s2 = new Singer("Madonna", "USA");
+      Singer s3 = new Singer("Rihanna", "Barbados");
+      Singer child1 = Unit0Exercises.returnSingerChild(s1, s2);
+      Singer child2 = Unit0Exercises.returnSingerChild(s2, s3);
+      assertNotEquals(null, child1);
+      assertNotEquals(null, child2);
+      assertEquals("Beyonce", child1.getName());
+      assertEquals("USA", child1.getLocation());
+      assertEquals("Madonna", child2.getName());
+      assertEquals("Barbados", child2.getLocation());
     }
 
     @Test

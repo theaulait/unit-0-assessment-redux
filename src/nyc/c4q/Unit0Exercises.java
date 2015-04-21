@@ -97,6 +97,20 @@ public class Unit0Exercises {
         return "";
     }
 
+    public static Singer returnBeyonce() {
+      // should return an instance of Singer with the name "Beyonce" and location "USA"
+      return null;
+    }
+
+    public static Singer returnSingerChild(Singer s1, Singer s2) {
+      // should return an instance of Singer with the name of s1 and the location of s2.
+      // For example:
+      //      Singer queenB = new Singer("Beyonce", "USA");
+      //      Singer rihanna = new Singer("Rihanna", "Barbados");
+      //      returnSingerChild(queenB, rihanna) ==> returns an instance of Singer with name "Beyonce" and location "Barbados".
+      return null;
+    }
+
     public static HashMap<String, Singer> returnSingers() {
         // should return a HashMap of the following singers:
         //      key="Beyonce",  Singer(name="Beyonce", location="USA")

@@ -167,4 +167,28 @@ public class Unit0TestsRedux {
     assertTrue(Unit0Exercises.isFromCanada(s1));
     assertFalse(Unit0Exercises.isFromCanada(s2));
   }
+
+  @Test
+  public void testChangeJayZsLocationToLosAngeles() {
+    HashMap<String, Singer> singers = new HashMap<String, Singer>();
+    singers.put("Beyonce", new Singer("Beyonce", "USA"));
+    singers.put("Jay-Z", new Singer("Jay-Z", "USA"));
+    singers.put("Bieber", new Singer("Bieber", "Canada"));
+    Singer jayz = singers.get("Jay-Z");
+    Unit0Exercises.changeJayZsLocationToLosAngeles(singers);
+    assertEquals("Los Angeles", jayz.getLocation());
+  }
+
+  @Test
+  public void testRemoveJepsenFromSingers() {
+    HashMap<String, Singer> singers = new HashMap<String, Singer>();
+    singers.put("Beyonce", new Singer("Beyonce", "USA"));
+    singers.put("Jay-Z", new Singer("Jay-Z", "USA"));
+    singers.put("Bieber", new Singer("Bieber", "Canada"));
+    singers.put("Drake", new Singer("Drake", "Canada"));
+    singers.put("Jepsen", new Singer("Jepsen", "Canada"));
+
+    Unit0Exercises.removeJepsenFromSingers(singers);
+    assertFalse(singers.containsKey("Jepsen"));
+  }
 }

@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.HashMap;
 
 import static org.junit.Assert.*;
 
@@ -118,5 +119,44 @@ public class Unit0TestsRedux {
         assertEquals(59700, Unit0Exercises.returnSumOfTheFirst200MultiplesOf3UsingWhileLoop());
     }
 
+    @Test
+    public void testIsEmptyString(){
+        assertTrue(Unit0Exercises.isEmptyString(""));
+        assertFalse(Unit0Exercises.isEmptyString("hello"));
+    }
 
+    @Test
+    public void testAlternateS1AndS2XTimes(){
+        assertEquals("",                                    Unit0Exercises.alternateS1AndS2Xtimes("abra", "cadabra", 0));
+        assertEquals("abracadabra",                         Unit0Exercises.alternateS1AndS2Xtimes("abra", "cadabra", 1));
+        assertEquals("abracadabraabracadabra", Unit0Exercises.alternateS1AndS2Xtimes("abra", "cadabra", 2));
+        assertEquals("abracadabraabracadabraabracadabra", Unit0Exercises.alternateS1AndS2Xtimes("abra", "cadabra", 3));
+    }
+
+
+    @Test
+    public void testStringSplit(){
+        assertEquals("ubi", Unit0Exercises.stringSplit("ubiquitous", "q"));
+        assertEquals("hello", Unit0Exercises.stringSplit("hellogoodbye", "good"));
+        assertEquals("", Unit0Exercises.stringSplit("fancy seeing you", "there"));
+    }
+
+    @Test
+    public void testReturnSingers(){
+        HashMap<String, Singer> people = Unit0Exercises.returnSingers();
+        assertNotEquals(null, people);
+
+        assertTrue(people.containsKey("Beyonce"));
+        assertTrue(people.containsKey("Jay-Z"));
+        assertTrue(people.containsKey("Bieber"));
+        assertTrue(people.containsKey("Drake"));
+        assertTrue(people.containsKey("Jepsen"));
+
+        assertEquals("USA", people.get("Beyonce").getLocation());
+        assertEquals("USA", people.get("Jay-Z").getLocation());
+        assertEquals("Canada", people.get("Bieber").getLocation());
+        assertEquals("Canada", people.get("Drake").getLocation());
+        assertEquals("Canada", people.get("Jepsen").getLocation());
+
+    }
 }

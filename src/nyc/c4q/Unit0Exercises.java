@@ -1,5 +1,7 @@
 package nyc.c4q;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -140,13 +142,17 @@ public class Unit0Exercises {
     }
 
     // Bonus Problems
-//    public static void readFileAndOnlyPrintCanadianCelebrities() {
-//        // TODO Use Apache Commons CSV and provide boilerplate for reading the file
-//        // https://commons.apache.org/proper/commons-csv/
-//        FileReader fr = new FileReader("celebrities.csv");
-//    }
-//
-//    public static void readFileAndPrintCelebrityAges(){
-//        // TODO similar as above
-//    }
+    public static void readFileAndOnlyPrintCanadianCelebrities() {
+        // TODO Use Apache Commons CSV and provide boilerplate for reading the file
+        // https://commons.apache.org/proper/commons-csv/
+      try {
+        FileReader fr = new FileReader("celebrities.csv");
+      } catch (FileNotFoundException e) {
+        e.printStackTrace();
+      }
+    }
+
+    public static void readFileAndPrintCelebrityAges(){
+        // TODO similar as above
+    }
 }

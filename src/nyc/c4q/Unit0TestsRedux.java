@@ -6,8 +6,6 @@ import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.HashMap;
 
 import static org.junit.Assert.*;
 
@@ -76,5 +74,49 @@ public class Unit0TestsRedux {
     public void testReturnPrimitiveCharASCII35() throws Exception {
         assertEquals('#', Unit0Exercises.returnPrimitiveCharASCII35());
     }
+
+    @Test
+    public void testIsEven() throws Exception {
+        assertTrue(Unit0Exercises.isEven(0));
+        assertFalse(Unit0Exercises.isEven(1));
+        assertTrue(Unit0Exercises.isEven(2));
+        assertFalse(Unit0Exercises.isEven(3));
+        assertTrue(Unit0Exercises.isEven(4));
+        assertFalse(Unit0Exercises.isEven(5));
+        assertTrue(Unit0Exercises.isEven(6));
+    }
+
+    @Test
+    public void testIsMultipleOfX() throws Exception {
+        assertTrue(Unit0Exercises.isMultipleOfX(0, 3));
+        assertFalse(Unit0Exercises.isMultipleOfX(1, 3));
+        assertFalse(Unit0Exercises.isMultipleOfX(2, 3));
+        assertTrue(Unit0Exercises.isMultipleOfX(3, 3));
+        assertFalse(Unit0Exercises.isMultipleOfX(10, 3));
+        assertTrue(Unit0Exercises.isMultipleOfX(28, 7));
+        assertTrue(Unit0Exercises.isMultipleOfX(-14, 7));
+        assertFalse(Unit0Exercises.isMultipleOfX(-6, 7));
+    }
+
+    @Test
+    public void testReturnSumOfOddNumbersBetween1And100UsingForLoop(){
+        assertEquals(2500, Unit0Exercises.returnSumOfOddNumbersBetween1And100UsingForLoop());
+    }
+
+    @Test
+    public void testReturnSumOfTheFirst200MultiplesOf3UsingForLoop(){
+        assertEquals(59700, Unit0Exercises.returnSumOfTheFirst200MultiplesOf3UsingForLoop());
+    }
+
+    @Test
+    public void testReturnSumOfOddNumbersBetween1And100UsingWhileLoop(){
+        assertEquals(2500, Unit0Exercises.returnSumOfOddNumbersBetween1And100UsingWhileLoop());
+    }
+
+    @Test
+    public void testReturnSumOfTheFirst200MultiplesOf3UsingWhileLoop(){
+        assertEquals(59700, Unit0Exercises.returnSumOfTheFirst200MultiplesOf3UsingWhileLoop());
+    }
+
 
 }

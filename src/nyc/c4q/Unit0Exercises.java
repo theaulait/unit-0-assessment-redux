@@ -89,7 +89,7 @@ public class Unit0Exercises {
         //      alternateS1AndS2Xtimes("abra", "cadabra", 0).equals("") == true
         //      alternateS1AndS2Xtimes("abra", "cadabra", 1).equals("abracadabra") == true
         //      alternateS1AndS2Xtimes("abra", "cadabra", 2).equals("abracadabraabracadabra") == true
-        //      alternateS1AndS2Xtimes("abra", "cadabra", 3).equals("abracadabraabracadabraabracadabra") == trueme
+        //      alternateS1AndS2Xtimes("abra", "cadabra", 3).equals("abracadabraabracadabraabracadabra") == true
         return "";
     }
 
@@ -103,7 +103,7 @@ public class Unit0Exercises {
         return "";
     }
 
-    public static Singer returnSingers() {
+    public static HashMap<String, Singer> returnSingers() {
         // should return a HashMap of the following singers:
         //      key="Beyonce",  Singer(name="Beyonce", location="USA")
         //      key="Jay-Z",    Singer(name="Jay-Z",   location="USA")

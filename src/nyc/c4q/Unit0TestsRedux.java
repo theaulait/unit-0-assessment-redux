@@ -29,6 +29,52 @@ public class Unit0TestsRedux {
     @Test
     public void testPrintHelloWorld() throws Exception {
         Unit0Exercises.print();
-        assertEquals("Hello World\n", outContent.toString());
+        assertEquals("I'm sorry Dave, I'm afraid I can't let you do that.\n", outContent.toString());
     }
+
+    @Test
+    public void testReturnPrimitiveBooleanFalseType() throws Exception {
+        Class returnType = Unit0Exercises.class.getMethod("returnPrimitiveBooleanFalse").getReturnType();
+        assertEquals(boolean.class, returnType);
+    }
+
+    @Test
+    public void testReturnPrimitiveBooleanFalse() throws Exception {
+        assertEquals(false, Unit0Exercises.returnPrimitiveBooleanFalse());
+    }
+
+    @Test
+    public void testReturnPrimitiveInt55Plus44Type() throws Exception {
+        Class returnType = Unit0Exercises.class.getMethod("returnPrimitiveInt55Plus44", null).getReturnType();
+        assertEquals(int.class, returnType);
+    }
+
+    @Test
+    public void testReturnPrimitiveInt55Plus44() throws Exception {
+        assertEquals(99, Unit0Exercises.returnPrimitiveInt55Plus44());
+    }
+
+    @Test
+    public void testReturnPrimitiveDouble2Point718Type() throws Exception {
+        Class returnType = Unit0Exercises.class.getMethod("returnPrimitiveDouble2Point718").getReturnType();
+        assertEquals(double.class, returnType);
+    }
+
+    @Test
+    public void testReturnPrimitiveDouble2Point718() throws Exception {
+        assertNotEquals(null, Unit0Exercises.returnPrimitiveDouble2Point718());
+        assertEquals(2.718, (Double) Unit0Exercises.returnPrimitiveDouble2Point718(), 0.01);
+    }
+
+    @Test
+    public void testReturnPrimitiveCharASCII35Type() throws Exception {
+        Class returnType = Unit0Exercises.class.getMethod("returnPrimitiveCharASCII35").getReturnType();
+        assertEquals(char.class, returnType);
+    }
+
+    @Test
+    public void testReturnPrimitiveCharASCII35() throws Exception {
+        assertEquals('#', Unit0Exercises.returnPrimitiveCharASCII35());
+    }
+
 }

@@ -106,7 +106,7 @@ public class Unit0TestsRedux {
 
     @Test
     public void testReturnSumOfTheFirst200MultiplesOf3UsingForLoop(){
-        assertEquals(59700, Unit0Exercises.returnSumOfTheFirst200MultiplesOf3UsingForLoop());
+        assertEquals(59700, Unit0Exercises.returnSumOfTheFirst200MultiplesOf3usingWhileLoop());
     }
 
     @Test
@@ -116,7 +116,7 @@ public class Unit0TestsRedux {
 
     @Test
     public void testReturnSumOfTheFirst200MultiplesOf3UsingWhileLoop(){
-        assertEquals(59700, Unit0Exercises.returnSumOfTheFirst200MultiplesOf3UsingWhileLoop());
+        assertEquals(59700, Unit0Exercises.returnSumOfTheFirst200MultiplesOf3usingForLoop());
     }
 
     @Test
@@ -159,4 +159,12 @@ public class Unit0TestsRedux {
         assertEquals("Canada", people.get("Jepsen").getLocation());
 
     }
+
+  @Test
+  public void testIsFromCanada() {
+    Singer s1 = new Singer("Bieber", "Canada");
+    Singer s2 = new Singer("Beyonce", "USA");
+    assertTrue(Unit0Exercises.isFromCanada(s1));
+    assertFalse(Unit0Exercises.isFromCanada(s2));
+  }
 }

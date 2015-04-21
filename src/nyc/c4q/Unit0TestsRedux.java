@@ -100,23 +100,13 @@ public class Unit0TestsRedux {
     }
 
     @Test
-    public void testReturnSumOfOddNumbersBetween1And100UsingForLoop(){
-        assertEquals(2500, Unit0Exercises.returnSumOfOddNumbersBetween1And100UsingForLoop());
+    public void testReturnSumOfOddNumbersBetween1And100(){
+        assertEquals(2500, Unit0Exercises.returnSumOfOddNumbersBetween1And100());
     }
 
     @Test
-    public void testReturnSumOfTheFirst200MultiplesOf3UsingForLoop(){
-        assertEquals(59700, Unit0Exercises.returnSumOfTheFirst200MultiplesOf3usingWhileLoop());
-    }
-
-    @Test
-    public void testReturnSumOfOddNumbersBetween1And100UsingWhileLoop(){
-        assertEquals(2500, Unit0Exercises.returnSumOfOddNumbersBetween1And100UsingWhileLoop());
-    }
-
-    @Test
-    public void testReturnSumOfTheFirst200MultiplesOf3UsingWhileLoop(){
-        assertEquals(59700, Unit0Exercises.returnSumOfTheFirst200MultiplesOf3usingForLoop());
+    public void testReturnSumOfTheFirst200MultiplesOf3(){
+        assertEquals(59700, Unit0Exercises.returnSumOfTheFirst200MultiplesOf3());
     }
 
     @Test

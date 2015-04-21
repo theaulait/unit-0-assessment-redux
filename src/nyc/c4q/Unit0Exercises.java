@@ -59,25 +59,13 @@ public class Unit0Exercises {
         return false;
     }
 
-    public static int returnSumOfOddNumbersBetween1And100UsingWhileLoop() {
+    public static int returnSumOfOddNumbersBetween1And100() {
         // Starts with [1, 3, 5, ...]
         // Ends with   [..., 95, 97, 99]
       return 0;
     }
 
-    public static int returnSumOfTheFirst200MultiplesOf3usingWhileLoop() {
-        // Starts with [0, 3, 6, ...]
-        // Ends with   [..., 591, 594, 597]
-      return 0;
-    }
-
-    public static int returnSumOfOddNumbersBetween1And100UsingForLoop() {
-        // Starts with [1, 3, 5, ...]
-        // Ends with   [..., 95, 97, 99]
-      return 0;
-    }
-
-    public static int returnSumOfTheFirst200MultiplesOf3usingForLoop() {
+    public static int returnSumOfTheFirst200MultiplesOf3() {
         // Starts with [0, 3, 6, ...]
         // Ends with   [..., 591, 594, 597]
       return 0;

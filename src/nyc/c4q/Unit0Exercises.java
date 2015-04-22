@@ -20,8 +20,9 @@ public class Unit0Exercises {
         //System.out.println(returnPrimitiveDouble2Point718());
         //System.out.println(isEven(8));
         //System.out.println(isMultipleOfX(9,3));
-        System.out.println(returnSumOfOddNumbersBetween1And100());
+        //System.out.println(returnSumOfTheFirst200MultiplesOf3());
         //System.out.println(alternateS1AndS2Xtimes("old", "man", 5));
+        System.out.println(alternateS1AndS2Xtimes("ab", "cd", 3));
     }
 
     public static void print() {
@@ -54,13 +55,11 @@ public class Unit0Exercises {
     }
 
     public static int returnSumOfOddNumbersBetween1And100() {
-        int num =0;
-        for (num=0; num < 100; num++) {
-           // if (num %2 != 0) {
-           //      num ++;
-          //  }
+        int result =0;
+        for (int num=1; num < 100; num+=2) {
+           result+=num;
         }
-        return num;
+        return result;
     }
 
         // Starts with [1, 3, 5, ...]
@@ -70,7 +69,11 @@ public class Unit0Exercises {
     public static int returnSumOfTheFirst200MultiplesOf3() {
         // Starts with [0, 3, 6, ...]
         // Ends with   [..., 591, 594, 597]
-      return 0;
+        int sum=0;
+        for(int i=1; i<200; i++){
+            sum+=(i*3);
+        }
+        return sum;
     }
 
     public static boolean isEmptyString(String str) {
@@ -80,29 +83,14 @@ public class Unit0Exercises {
         else {
         } return false;
     }
-    public static String alternateS1AndS2Xtimes(String s1, String s2, int x)
-    {
-        // Given string `s1`, `s2` and a positive integer `x`,
-        // return a string that is equal to s1 + s2 repeated x times.
-        // If x is 0 or negative negative, return an empty string `""`.
-        // For example:
-        //      alternateS1AndS2Xtimes("abra", "cadabra", 0).equals("") == true
-        //      alternateS1AndS2Xtimes("abra", "cadabra", 1).equals("abracadabra") == true
-        //      alternateS1AndS2Xtimes("abra", "cadabra", 2).equals("abracadabraabracadabra") == true
-        //alternateS1AndS2Xtimes("abra", "cadabra", 3).equals("abracadabraabracadabraabracadabra") == true
+    public static String alternateS1AndS2Xtimes(String s1, String s2, int x) {
         String together = s1 + s2;
-        if(x > 0)
-        {
-            for(int i = 1; i <= x; i++)
-            {
-                return together;
+        String result = "";
+        for( int i = 0; i < x; i++){
+            result += together;
+        }
+                return result;
             }
-        }
-
-        {
-            return "";
-        }
-    }
 
     public static String stringSplit(String s, String splitOn)
     {
@@ -131,14 +119,14 @@ public class Unit0Exercises {
     }
 
     public static HashMap<String, Singer> returnSingers() {
-        Singer jay = new Singer("Jay-Z", "USA");
+        Singer jayz = new Singer("Jay-Z", "USA");
         Singer bie = new Singer("Bieber", "Canada");
         Singer drake = new Singer("Drake", "Canada");
         Singer jen = new Singer("Jepsen", "Canada");
 
         HashMap<String, Singer> artist = new HashMap<String, Singer>();
         artist.put("Beyonce", returnBeyonce());
-        artist.put("Jay-Z",jay);
+        artist.put("Jay-Z",jayz);
         artist.put("Bieber", bie);
         artist.put("Drake", drake);
         artist.put("Jepsen", jen);
@@ -151,15 +139,20 @@ public class Unit0Exercises {
     }
 
     public static void changeJayZsLocationToLosAngeles(HashMap<String, Singer> people) {
+
+        people.get("Jay-Z").setLocation("Los Angeles");
         // people will have the values of the `returnSingers()` method you filled in previously.
         // the city should be set to "Los Angeles"
         // old value of Jay-Z:
         //      Singer(name="Jay-Z",   location="USA")
         // new value of Jay-Z:
         //      Singer(name="Jay-Z",   location="Los Angeles")
+
     }
 
     public static void removeJepsenFromSingers(HashMap<String, Singer> people){
+
+        people.remove("Jepsen");
         // people will have the values of the `returnSingers()` method you filled in previously.
         // old keys in `people`:
         //  ["Beyonce", "Jay-Z", "Bieber", "Drake", "Jepsen"]

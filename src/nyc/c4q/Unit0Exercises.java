@@ -14,56 +14,58 @@ public class Unit0Exercises {
      */
     public static void main (String args[]) {
         // Use main to test your methods
-        print();
+        //print();
+        //System.out.println(returnPrimitiveBooleanFalse());
+        //System.out.println(returnPrimitiveInt55Plus44());
+        //System.out.println(returnPrimitiveDouble2Point718());
+        //System.out.println(isEven(8));
+        //System.out.println(isMultipleOfX(9,3));
+        System.out.println(returnSumOfOddNumbersBetween1And100());
+        //System.out.println(alternateS1AndS2Xtimes("old", "man", 5));
     }
 
     public static void print() {
-        // print out "I'm sorry Dave, I'm afraid I can't let you do that."
-        System.out.println("");
+        System.out.println("I'm sorry Dave, I'm afraid I can't let you do that.");
     }
 
-    public static Object returnPrimitiveBooleanFalse() {
-        return null;
+    public static boolean returnPrimitiveBooleanFalse() {
+        return false;
     }
 
-    public static Object returnPrimitiveInt55Plus44() {
-        return null;
+    public static int returnPrimitiveInt55Plus44() {
+        return 55 + 44;
     }
 
-    public static Object returnPrimitiveDouble2Point718() {
-        // This is the start of a famous mathematical constant.
-        // What's that constant?
-        return null;
+    public static double returnPrimitiveDouble2Point718() {
+        return 2.718;
     }
 
-    public static Object returnPrimitiveCharASCII35() {
-        // What's the character for the ASCII number 35?
-        // Look at an ASCII table and return that character.
-        // You can look at the ASCII table at http://www.asciitable.com/
-        return null;
+    public static char returnPrimitiveCharASCII35() {
+        return '#';
     }
 
     public static boolean isEven(int n) {
-        return false;
+        return (n%2 == 0);
     }
 
     public static boolean isMultipleOfX(int n, int x) {
-        // 0 is a multiple of every number (except 0)
-        // For example:
-        //      isMultipleOfX(0, 3) == true
-        //      isMultipleOfX(1, 3) == false
-        //      isMultipleOfX(3, 3) == true
-        //      isMultipleOfX(10, 3) == false
-        //      isMultipleOfX(28, 7) == true
-        // TODO expect a ArithmeticException in Test with x==0
-        return false;
+
+        return (n % x == 0);
     }
 
     public static int returnSumOfOddNumbersBetween1And100() {
+        int num =0;
+        for (num=0; num < 100; num++) {
+           // if (num %2 != 0) {
+           //      num ++;
+          //  }
+        }
+        return num;
+    }
+
         // Starts with [1, 3, 5, ...]
         // Ends with   [..., 95, 97, 99]
-      return 0;
-    }
+
 
     public static int returnSumOfTheFirst200MultiplesOf3() {
         // Starts with [0, 3, 6, ...]
@@ -72,10 +74,14 @@ public class Unit0Exercises {
     }
 
     public static boolean isEmptyString(String str) {
-        return false;
+        if(str.equals("")) {
+            return true;
+        }
+        else {
+        } return false;
     }
-
-    public static String alternateS1AndS2Xtimes(String s1, String s2, int x) {
+    public static String alternateS1AndS2Xtimes(String s1, String s2, int x)
+    {
         // Given string `s1`, `s2` and a positive integer `x`,
         // return a string that is equal to s1 + s2 repeated x times.
         // If x is 0 or negative negative, return an empty string `""`.
@@ -83,46 +89,65 @@ public class Unit0Exercises {
         //      alternateS1AndS2Xtimes("abra", "cadabra", 0).equals("") == true
         //      alternateS1AndS2Xtimes("abra", "cadabra", 1).equals("abracadabra") == true
         //      alternateS1AndS2Xtimes("abra", "cadabra", 2).equals("abracadabraabracadabra") == true
-        //      alternateS1AndS2Xtimes("abra", "cadabra", 3).equals("abracadabraabracadabraabracadabra") == true
-        return "";
+        //alternateS1AndS2Xtimes("abra", "cadabra", 3).equals("abracadabraabracadabraabracadabra") == true
+        String together = s1 + s2;
+        if(x > 0)
+        {
+            for(int i = 1; i <= x; i++)
+            {
+                return together;
+            }
+        }
+
+        {
+            return "";
+        }
     }
 
-    public static String stringSplit(String s, String splitOn) {
-        // Given string s, return a string that stops at the first occurrence of "split".
-        // For example:
-        //      stringSplit("ubiquitous", "q").equals("ubi") == true
-        //      stringSplit("hellogoodbye", "good").equals("hello") == true
-        //      stringSplit("fancy seeing you", "there").equals("") == true
-        // If the string does not contain split, then return the empty string "".
-        return "";
+    public static String stringSplit(String s, String splitOn)
+    {
+        if(s.contains(splitOn))
+        {
+            String split = s.substring(0, s.indexOf(splitOn));
+            return split;
+        }else{
+            return "";
+        }
     }
 
     public static Singer returnBeyonce() {
-      // should return an instance of Singer with the name "Beyonce" and location "USA"
-      return null;
+      Singer beyonce = new Singer("Beyonce", "USA");
+      return beyonce;
     }
 
     public static Singer returnSingerChild(Singer s1, Singer s2) {
+      Singer child = new Singer(s1.getName(), s2.getLocation());
       // should return an instance of Singer with the name of s1 and the location of s2.
       // For example:
       //      Singer queenB = new Singer("Beyonce", "USA");
       //      Singer rihanna = new Singer("Rihanna", "Barbados");
       //      returnSingerChild(queenB, rihanna) ==> returns an instance of Singer with name "Beyonce" and location "Barbados".
-      return null;
+      return child;
     }
 
     public static HashMap<String, Singer> returnSingers() {
-        // should return a HashMap of the following singers:
-        //      key="Beyonce",  Singer(name="Beyonce", location="USA")
-        //      key="Jay-Z",    Singer(name="Jay-Z",   location="USA")
-        //      key="Bieber",   Singer(name="Bieber",  location="Canada")
-        //      key="Drake",    Singer(name="Drake",   location="Canada")
-        //      key="Jepsen",   Singer(name="Jepsen",  location="Canada")
-        return null;
+        Singer jay = new Singer("Jay-Z", "USA");
+        Singer bie = new Singer("Bieber", "Canada");
+        Singer drake = new Singer("Drake", "Canada");
+        Singer jen = new Singer("Jepsen", "Canada");
+
+        HashMap<String, Singer> artist = new HashMap<String, Singer>();
+        artist.put("Beyonce", returnBeyonce());
+        artist.put("Jay-Z",jay);
+        artist.put("Bieber", bie);
+        artist.put("Drake", drake);
+        artist.put("Jepsen", jen);
+
+        return artist;
     }
 
     public static boolean isFromCanada(Singer person) {
-        return false;
+        return person.getLocation().equalsIgnoreCase("Canada");
     }
 
     public static void changeJayZsLocationToLosAngeles(HashMap<String, Singer> people) {
